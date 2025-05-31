@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>MedFlow - Nova Medicação</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #e9f4f4;
+      color: #1a2d50;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #e9f4f4;
+      padding: 20px 30px 10px;
+      border-bottom: 2px solid #1a2d50;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      margin: 0;
+    }
+
+    .user-info {
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .user-info i {
+      font-size: 20px;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #e9f4f4;
+      padding: 20px;
+      border-right: 2px solid #1a2d50;
+    }
+
+    .sidebar h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar li {
+      margin-bottom: 10px;
+    }
+
+    .main {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .main h2 {
+      font-size: 22px;
+      border-bottom: 2px solid #1a2d50;
+      display: inline-block;
+      margin-bottom: 30px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 15px 25px;
+      align-items: center;
+    }
+
+    .form-grid label {
+      font-weight: bold;
+    }
+
+    .form-grid .field {
+      background-color: #11234a;
+      color: #ffffff;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    .form-grid .field:empty::after {
+      content: "-";
+      color: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        display: none;
+      }
+
+      .main {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>MedFlow</h1>
+    <div class="user-info">
+      <span>Fábio Santos</span>
+      <i class="fas fa-user-circle"></i>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="sidebar">
+      <h3><i class="fas fa-bars"></i> Cadastro de Medicações</h3>
+      <ul>
+        <li>• Nova Medicação</li>
+        <li>• Edição de Medicações</li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <h2>Nova Medicação</h2>
+      <div class="form-grid">
+        <label>Nome</label>
+        <div class="field">Dipirona Sódica</div>
+
+        <label>Código</label>
+        <div class="field">F13JKLM521861233AF10</div>
+
+        <label>Classe Terapêutica</label>
+        <div class="field">Analgésico Não-opioide</div>
+
+        <label>Forma Farmacêutica</label>
+        <div class="field">Comprimido</div>
+
+        <label>Dosagem</label>
+        <div class="field">500 mg/cápsula</div>
+
+        <label>Via de Administração</label>
+        <div class="field">Oral</div>
+
+        <label>Efeitos Colaterais</label>
+        <div class="field">Reações alérgicas, náusea, vômito</div>
+
+        <label>Contraindicações</label>
+        <div class="field">Hipersensibilidade à dipirona e gestantes nos três primeiros meses</div>
+
+        <label>Interação Medicamentosa</label>
+        <div class="field">Ciclosporina, analgésicos e anticoagulantes</div>
+
+        <label>Armazenamento</label>
+        <div class="field">Temperatura ambiente, em local seco e sem luz solar</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
