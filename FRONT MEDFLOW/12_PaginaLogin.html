@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>PaginaLogin</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    async function validarLogin() {
+      // Utiliza o campo com id "login" para capturar o valor do login
+      const login = document.getElementById("login").value;
+      const senha = document.getElementById("senha").value;
+      
+      // Atualiza o endpoint para enviar os parâmetros "login" e "senha"
+      const endpoint = `https://apex.oracle.com/pls/apex/mvselli_senac/medflow/login?login=${encodeURIComponent(login)}&senha=${encodeURIComponent(senha)}`;
+      
+      try {
+        const response = await fetch(endpoint, { method: 'GET' });
+        if (!response.ok) {
+          throw new Error('Erro na conexão com o servidor.');
+        }
+        const data = await response.json();
+        
+        if (data && data.items && data.items.length > 0) {
+          // Login bem-sucedido: redireciona para o Dashboard
+          window.location.href = "2_MF_DashBoard.html";
+        } else {
+          alert("Login ou senha incorretos!");
+        }
+      } catch (error) {
+        console.error("Erro:", error);
+        alert("Erro durante a tentativa de login.");
+      }
+    }
+  </script>
+</head>
+<body class="login-page">
+  <div class="medflow-header">
+    <h1>MedFlow</h1>
+  </div>
+  
+  <div class="login-container">
+    <h1 class="login-title">Login</h1>
+    <form onsubmit="event.preventDefault(); validarLogin();">
+      <!-- Campo de entrada para "login" -->
+      <input type="text" id="login" placeholder="Login" required>
+      <input type="password" id="senha" placeholder="Senha" required>
+      <button type="submit" class="btn">Entrar</button>
+    </form>
+  </div>
+</body>
+</html>
