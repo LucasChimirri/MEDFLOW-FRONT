@@ -343,3 +343,89 @@ body {
   }
 }
 
+ /* TELA DE PRESCRIÇÃO  */
+
+ /* Reset global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos base do body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e9f4f4;
+  color: #11234a;
+}
+
+/* Container principal da tela */
+.login-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Caixa de prescrição */
+.login-container {
+  background-color: #11234a;
+  color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 300px;
+  text-align: center;
+  margin: auto;
+}
+
+/* Cabeçalho do MedFlow */
+.medflow-header {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: #11234a;
+}
+
+/* Título da tela */
+.login-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para inputs e selects */
+input, select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  color: #11234a;
+}
+
+/* Botão estilizado */
+.btn {
+  background-color: #1a2d50;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: #11234a;
+}
+
+/* Estilos para a página inicial (med_flow.html) */
+.home-body {
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+

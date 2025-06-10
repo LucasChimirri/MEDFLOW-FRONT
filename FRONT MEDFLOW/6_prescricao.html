@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>MedFlow - Prescrição Médica</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="login-page">
+    <div class="login-container">
+      <h1 class="medflow-header">MedFlow</h1>
+      <h2 class="login-title">Prescrição Médica</h2>
+      <form action="#" method="POST">
+        <label for="medicacao">Medicação</label>
+        <select name="medicacao" id="medicacao">
+          <option value="AMOXICILINA">AMOXICILINA</option>
+          <option value="DIPIRONA">DIPIRONA</option>
+          <option value="PARACETAMOL">PARACETAMOL</option>
+          <option value="SINVASTATINA">SINVASTATINA</option>
+          <option value="METFORMINA">METFORMINA</option>
+          <option value="AZITROMICINA">AZITROMICINA</option>
+          <option value="LOSARTANA">LOSARTANA</option>
+        </select>
+
+        <label for="via">Via de Administração</label>
+        <select name="via" id="via">
+          <option value="Via-Oral">Via-Oral</option>
+          <option value="Intramuscular">Intramuscular</option>
+          <option value="Sublingual">Sublingual</option>
+          <option value="Intra-venoso">Intra-venoso</option>
+        </select>
+
+        <label for="intervalo">Intervalo de Administração (horas)</label>
+        <select name="intervalo" id="intervalo">
+          <option value="3">3 horas</option>
+          <option value="6">6 horas</option>
+          <option value="12">12 horas</option>
+        </select>
+
+        <button type="submit" class="btn">Prescrever</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
