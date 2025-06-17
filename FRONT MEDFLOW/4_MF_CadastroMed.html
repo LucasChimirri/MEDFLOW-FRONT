@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>MedFlow - Nova Medicação</title>
+  <title>MedFlow – Cadastro de Medicações</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -13,12 +13,96 @@
     <div class="sidebar">
       <h1>MedFlow</h1>
       <ul>
-        <li>• Nova Medicação</li>
-        <li>• Edição de Medicações</li>
+        <li>• Salvar Medicação</li>
+        <li>• Editar Medicação</li>
+        <li>• Excluir Medicação</li>
+        <li>• Voltar </li>
       </ul>
     </div>
 
     <!-- Main Content -->
+    <div class="main">
+      <div class="topbar">
+        <h2>Nova Medicação</h2>
+        <div class="user">
+          <span>Fábio Santos</span>
+          <i class="fas fa-user-circle"></i>
+        </div>
+      </div>
+
+      <!-- Formulário -->
+      <form id="cadForm" class="form">
+        <div class="form-group">
+          <label for="nome">Nome do Medicamento</label>
+          <input id="nome" name="nome" type="text" required>
+        </div>
+        <div class="form-group">
+          <label for="descricao">Descrição</label>
+          <textarea id="descricao" name="descricao" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="fabricante">ID do Fabricante</label>
+          <input id="fabricante" name="fabricante" type="text" required>
+        </div>
+        <div class="form-group">
+          <label for="qtdeEstoque">Quantidade em Estoque</label>
+          <input id="qtdeEstoque" name="qtdeEstoque" type="number" required>
+        </div>
+        <div class="form-group">
+          <label for="qtdeMinima">Quantidade Mínima</label>
+          <input id="qtdeMinima" name="qtdeMinima" type="number" required>
+        </div>
+        <div class="form-group">
+          <label for="vlrCusto">Valor (R$)</label>
+          <input id="vlrCusto" name="vlrCusto" type="number" step="0.01" required>
+        </div>
+        <div class="form-group">
+          <label for="colaterais">Descrição de Colaterais</label>
+          <textarea id="colaterais" name="colaterais" rows="2" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="via">ID da Via</label>
+          <input id="via" name="via" type="text" required>
+        </div>
+        <div class="form-group">
+          <label for="validade">Validade</label>
+          <input id="validade" name="validade" type="date" required>
+        </div>
+
+        <button type="submit" class="btn">Salvar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Importa o JavaScript que faz o POST -->
+  <script src="cadastro_med.js"></script>
+</body>
+</html>
+
+
+<!--  <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>MedFlow - Nova Medicação</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Sidebar --
+    <div class="sidebar">
+      <h1>MedFlow</h1>
+      <ul>
+        <li>• Salvar Medicação</li>
+        <li>• Editar Medicação</li>
+        <li>• Excluir Medicação</li>
+        <li>• Voltar </li>
+      </ul>
+    </div>
+
+    <!-- Main Content --
     <div class="main">
       <div class="topbar">
         <h2>Nova Medicação</h2>
@@ -71,7 +155,7 @@
         </div>
       </div>
 
-      <!-- Botão de salvar -->
+      <!-- Botão de salvar --
       <div style="margin-top: 20px;">
         <button style="background-color: #11234a; color: #fff; padding: 10px 20px; border: none; border-radius: 6px; font-size: 14px; cursor: pointer; transition: background-color 0.3s;" 
                 onmouseover="this.style.backgroundColor='#1a2d50'" 
@@ -83,4 +167,4 @@
   </div>
 
 </body>
-</html>
+</html>-->

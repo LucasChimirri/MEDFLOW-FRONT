@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>MedFlow – Consulta de Medicamento</title>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="consulta-page">
+
+  <!-- Cabeçalho -->
+  <div class="medflow-header">
+    <h1>Consulta de Medicação</h1>
+  </div>
+
+  <!-- Busca por ID -->
+  <div class="consulta-container">
+    <div class="search-group">
+      <input
+        type="number"
+        id="idMedicamento"
+        placeholder="Digite o ID do Medicamento"
+      />
+      <button id="btnBuscar" class="btn">
+        <i class="fas fa-search"></i> Buscar
+      </button>
+    </div>
+  </div>
+
+  <!-- Resultado -->
+  <div class="resultado-container">
+    <form id="resultForm" class="form consulta-form" style="display: none;">
+      <div class="form-group">
+        <label>ID Medicamento</label>
+        <input id="resId" disabled />
+      </div>
+      <div class="form-group">
+        <label>Nome</label>
+        <input id="resNome" disabled />
+      </div>
+      <div class="form-group">
+        <label>Descrição de Uso</label>
+        <input id="resDesc" disabled />
+      </div>
+      <div class="form-group">
+        <label>Via de Aplicação</label>
+        <input id="resVia" disabled />
+      </div>
+      <div class="form-group">
+        <label>Qtd. em Estoque</label>
+        <input id="resEstoque" disabled />
+      </div>
+      <div class="form-group">
+        <label>Qtd. Mínima Aceitável</label>
+        <input id="resMinima" disabled />
+      </div>
+      <div class="form-group">
+        <label>Validade</label>
+        <input id="resValidade" disabled />
+      </div>
+      <div class="form-group">
+        <label>Valor (R$)</label>
+        <input id="resValor" disabled />
+      </div>
+      <div class="form-group">
+        <label>Fabricante</label>
+        <input id="resFab" disabled />
+      </div>
+    </form>
+  </div>
+
+  <script src="consulta_med.js"></script>
+</body>
+</html>

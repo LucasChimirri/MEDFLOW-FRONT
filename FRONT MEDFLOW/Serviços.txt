@@ -1,0 +1,33 @@
+Via Medicacao
+  - GET - https://apex.oracle.com/pls/apex/mvselli_senac/medflow/via_administracao     ( lista de administrcao ) 
+  - GET - https://apex.oracle.com/pls/apex/mvselli_senac/medflow/via_administracao/:id ( pesquisa pelo id )
+  - PUT - https://apex.oracle.com/pls/apex/mvselli_senac/medflow/via_administracao     ( alteracao a descricao )
+  - POST- https://apex.oracle.com/pls/apex/mvselli_senac/medflow/via_administracao     (inclusao)
+  
+Fabricante
+  - GET - https://apex.oracle.com/pls/apex/mvselli_senac/medflow/fabricante
+  - GET - https://apex.oracle.com/pls/apex/mvselli_senac/medflow/fabricante/:id_fabricante ( pesquisa pelo id )
+
+CONSULTA DE PACIENTES
+GET - https://apex.oracle.com/pls/apex/mvselli_senac/medflow/paciente               ( CONSULTA FULL )
+GET - https://apex.oracle.com/pls/apex/mvselli_senac/medflow/paciente/:id_cliente   ( CONSULTA ID_CLIENTE )
+GET - https://apex.oracle.com/pls/apex/mvselli_senac/medflow/paciente_nome          ( PESQUISA PELO NOME DO CLIENTE ) 
+
+CONSULTA DE DADOS DA MEDICACAO
+GET - https://apex.oracle.com/pls/apex/mvselli_senac/medflow/medicamento                  ( CONSULTA FULL )
+GET - https://apex.oracle.com/pls/apex/mvselli_senac/medflow/medicamento/:id_medicamento  ( CONSULTA ID_MEDICAMENTO )
+GET - https://apex.oracle.com/pls/apex/mvselli_senac/medflow/medicamento_nome		  ( PESQUISA PELO NOME DO MEDICAMENTO ) 
+
+CONSULTA DE MEDICACAO POR CLIENTE
+GET - https://apex.oracle.com/pls/apex/mvselli_senac/medflow/medicacao/cliente/:id_cliente ( PESQUISA PELO id_cliente ) 
+
+CONSULTA DE PACIENTES POR FUNCIONARIO
+GET - https://apex.oracle.com/pls/apex/mvselli_senac/medflow/pacientes/funcionario/:id_funcionario ( pesquisa pelo ID_funcionario )
+
+CONSULTA DE ESTOQUE POR MEDICACAO
+GET - https://apex.oracle.com/pls/apex/mvselli_senac/medflow/medicamento/estoque/:id_medicamento  ( CONSULTA ID_MEDICAMENTO )
+
+CONSULTA DE FUNCIONARIOS
+GET - https://apex.oracle.com/pls/apex/mvselli_senac/medflow/funcionario  ( CONSULTA FULL )
+GET - https://apex.oracle.com/pls/apex/mvselli_senac/medflow/funcionario/:id_funcionario
+GET - https://apex.oracle.com/pls/apex/mvselli_senac/medflow/funcionario/matricula/:id_matricula
