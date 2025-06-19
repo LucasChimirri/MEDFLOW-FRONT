@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>MedFlow – Edição de Medicação</title>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="editar_med.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div>
+        <h1>MedFlow</h1>
+        <h2><i class="fas fa-pills"></i> Farmácia</h2>
+        <ul>
+          <li><a href="4_MF_CadastroMed.html"style="color:inherit; text-decoration: none; ">• Cadastro de Medicações</a></li>
+          <li><a href="4.1_MF_ConsultaMed.html"style="color:inherit; text-decoration: none; ">• Consulta de Medicações</a></li>
+          <li><a href="4.3_MF_EditarMed.html"style="color:inherit; text-decoration: none; ">• Edição de Medicação</a></li>
+          <li><a href="4.2_MF_ExclusaoMed.html" style="color:inherit; text-decoration: none; ">• Exclusão de Medicação</a></li>
+          <li>• Liberação de Medicações</li>
+          <li>• Gestão de Estoque</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+      <div class="topbar">
+        <h2>Editar Medicação</h2>
+        <div class="user">
+          <span>Lucas Chimirri</span>
+          <i class="fas fa-user-circle"></i>
+        </div>
+      </div>
+
+      <!-- Formulário de Edição -->
+      <form class="form" onsubmit="editarMedicacao(event)">
+        <div class="form-group">
+          <label for="idMedicamento">ID do Medicamento</label>
+          <input
+            type="number"
+            id="idMedicamento"
+            placeholder="Ex: 31"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="nome">Nome do Medicamento</label>
+          <input id="nome" type="text" placeholder="Ex: DUREPOX" required />
+        </div>
+        <div class="form-group">
+          <label for="descricao">Descrição</label>
+          <textarea
+            id="descricao"
+            rows="3"
+            placeholder="TRATAMENTO DE INFECÇÕES BACTERIANAS"
+            required
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="fabricante">ID do Fabricante</label>
+          <input id="fabricante" type="text" placeholder="Ex: 5" required />
+        </div>
+        <div class="form-group">
+          <label for="qtdeEstoque">Quantidade em Estoque</label>
+          <input
+            id="qtdeEstoque"
+            type="number"
+            placeholder="Ex: 100"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="qtdeMinima">Quantidade Mínima</label>
+          <input id="qtdeMinima" type="number" placeholder="Ex: 0" required />
+        </div>
+        <div class="form-group">
+          <label for="vlrCusto">Valor (R$)</label>
+          <input
+            id="vlrCusto"
+            type="number"
+            step="0.01"
+            placeholder="Ex: 50.91"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="colaterais">Descrição de Colaterais</label>
+          <textarea
+            id="colaterais"
+            rows="2"
+            placeholder="REAÇÕES ALÉRGICAS LEVES"
+            required
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="via">ID da Via</label>
+          <input id="via" type="text" placeholder="Ex: 5" required />
+        </div>
+        <div class="form-group">
+          <label for="validade">Validade</label>
+          <input id="validade" type="date" required />
+        </div>
+        <div class="form-group" style="grid-column: span 2;">
+          <button type="submit" class="btn">Salvar Alterações</button>
+        </div>
+      </form>
+
+      <div id="mensagemRetorno" style="margin-top:20px; font-weight:bold;"></div>
+    </div>
+  </div>
+</body>
+</html>

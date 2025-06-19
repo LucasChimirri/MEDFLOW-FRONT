@@ -2,31 +2,36 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>PaginaLogin</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Conexão com o CSS -->
+  <title>MedFlow – Login</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="login-page">
-  <!-- Cabeçalho com "MedFlow" -->
-  <div class="medflow-header">
-    <h1>MedFlow</h1>
+
+  <!-- Título acima do painel -->
+  <h1 class="login-title">MedFlow</h1>
+
+  <!-- Painel central -->
+  <div class="login-panel">
+    <div class="login-box">
+      <h2>Login</h2>
+      <form onsubmit="validarLogin(event);" method="POST">
+        <div class="form-group">
+          <input type="text" id="usuario" placeholder="Usuário" required>
+        </div>
+        <div class="form-group">
+          <input type="password" id="senha" placeholder="Senha" required>
+        </div>
+        <button type="submit" class="btn block">Entrar</button>
+      </form>
+    </div>
+
+    <!-- Lado direito: imagem -->
+    <div class="login-image">
+      <img src="dr_sujiro.png"
+           alt="Pessoa sorrindo em consultório médico">
+    </div>
   </div>
-  
-  <div class="login-container">
-    <h1 class="login-title">Login</h1>
-    <!-- O formulário chama a função validarLogin ao ser submetido -->
-    <form onsubmit="validarLogin(event);" method="POST">
-      <!-- Inputs para usuário e senha -->
-      <input type="text" id="usuario" placeholder="Usuário" required>
-      <input type="password" id="senha" placeholder="Senha" required>
-      <button type="submit" class="btn">Entrar</button>
-    </form>
-  </div>
-  
-  <!-- Importa o arquivo login.js -->
+
   <script src="login.js"></script>
 </body>
 </html>
-
-<!-- "C:\Program Files\Google\Chrome\Application\chrome.exe" 
- --disable-web-security --disable-features=VizDisplayCompositor 
- --user-data-dir="C:\temp\chrome_dev" -->

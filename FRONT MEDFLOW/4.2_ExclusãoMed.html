@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>MedFlow – Exclusão de Medicação</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="exclusao_med.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div>
+        <h1>MedFlow</h1>
+        <h2><i class="fas fa-pills"></i> Farmácia</h2>
+        <ul>
+          <li><a href="4_MF_CadastroMed.html" style="color: inherit; text-decoration: none;">• Cadastro de Medicações</a></li>
+          <li><a href="4.1_MF_ConsultaMed.html" style="color: inherit; text-decoration: none;">• Consulta de Medicações</a></li>
+          <li><a href="4.2_ExclusãoMed.html" style="color: inherit; text-decoration: none;">• Exclusão de Medicação</a></li>
+          <li>• Liberação de Medicações</li>
+          <li>• Registro Emergencial</li>
+          <li>• Gestão de Estoque</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="main">
+      <div class="topbar">
+        <h2>Excluir Medicação</h2>
+        <div class="user">
+          <span>Lucas Chimirri</span>
+          <i class="fas fa-user-circle"></i>
+        </div>
+      </div>
+
+      <!-- Formulário -->
+      <form class="form" onsubmit="excluirMedicacao(event)">
+        <div class="form-group">
+          <label for="idMedicamento">ID do Medicamento</label>
+          <input type="number" id="idMedicamento" placeholder="Ex: 23" required />
+        </div>
+        <div class="form-group">
+          <label for="usuario">Usuário</label>
+          <input type="text" id="usuario" placeholder="Seu nome de usuário" required />
+        </div>
+        <div class="form-group" style="grid-column: span 2;">
+          <button type="submit" class="btn">Excluir</button>
+        </div>
+      </form>
+
+      <div id="mensagemRetorno" style="margin-top: 20px; font-weight: bold;"></div>
+    </div>
+  </div>
+</body>
+</html>

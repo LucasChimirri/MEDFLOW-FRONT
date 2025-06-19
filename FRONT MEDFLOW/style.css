@@ -1,294 +1,127 @@
-body {
-  background-color: #e5f2f0;
-  font-family: Arial, sans-serif;
-  text-align: center;
-}
-
-h1 {
-  color: #122348;
-  font-size: 36px;
-  margin-bottom: 40px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.card {
-  background-color: #122348;
-  color: #f1f1f1;
-  border-radius: 10px;
-  padding: 30px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card i {
-  font-size: 36px;
-  margin-bottom: 15px;
-}
-
-.label {
-  font-size: 16px;
-}
-
- /* <!--                              3_DashBoard                          -->*/
- 
- * {
+/* Reset e Box-Sizing */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/*body {
+/* Variáveis de cor */
+:root {
+  --azul-escuro : #11234a;
+  --azul-claro  : #1f3a78;   /* azul-médio, container do form */
+  --azul-hover  : #1a2d50;
+  --cinza-claro : #e5f2f0;
+  --branco      : #ffffff;
+}
+
+/* BODY */
+body {
   font-family: Arial, sans-serif;
-  background-color: #e9f4f4;
-  color: #11234a;
-}*/
-
-.container {
-  display: flex;
-  height: 100vh;
-}
-
-.sidebar {
-  width: 260px;
-  background-color: #11234a;
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
+  background-color: var(--cinza-claro);
+  color: var(--azul-escuro);
+  text-align: center;
   padding: 20px;
-  justify-content: space-between;
 }
 
-.sidebar h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
+/* Título “MedFlow” acima do painel */
+.login-title {
+  color: var(--azul-escuro);
+  font-size: 80px;
+  margin: 40px 0 20px;
 }
 
-.sidebar h2 {
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 15px;
+/* PAINEL CENTRAL */
+.login-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  background-color: var(--azul-escuro);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
 }
 
-.sidebar ul {
-  list-style: none;
-  padding-left: 10px;
-}
-
-.sidebar ul li {
-  margin-bottom: 10px;
-  font-size: 14px;
-  padding: 6px 10px;
-  border-radius: 6px;
-  transition: background-color 0.3s, padding-left 0.3s;
-  cursor: pointer;
-}
-
-.sidebar ul li:hover {
-  background-color: #1a2d50;
-  padding-left: 16px;
-}
-
-.sidebar .footer-options {
-  border-top: 1px solid #ccc;
-  padding-top: 10px;
-  margin-top: 30px;
-}
-
-.sidebar .footer-options li {
-  margin-bottom: 10px;
-}
-
-.main {
-  flex: 1;
-  padding: 20px 40px;
-  position: relative;
-}
-
-.topbar {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.topbar span {
-  margin-right: 10px;
-  font-weight: bold;
-}
-
-.topbar i {
-  font-size: 20px;
-}
-
-.main h2 {
-  font-size: 22px;
-  margin-bottom: 30px;
-}
-
-.cards {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.card {
-  background-color: #11234a;
-  color: #ffffff;
-  width: 220px;
-  height: 160px;
-  border-radius: 10px;
+/* CAIXA DO FORMULÁRIO (AZUL-CLARO) */
+.login-box {
+  background-color: var(--azul-claro);
+  padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s;
-  cursor: pointer;
 }
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card i {
-  font-size: 36px;
-  margin-bottom: 15px;
-}
-
-.card span {
-  font-size: 14px;
-}
-
-
-
- /* <!--                  4_Cadastro_Medicamentos                          -->*/
-
-
- * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/*
-body {
-  font-family: Arial, sans-serif;
-  background-color: #e9f4f4;
-  color: #11234a;
-}*/
-
-.container {
-  display: flex;
-  height: 100vh;
-}
-
-.sidebar {
-  width: 240px;
-  background-color: #11234a;
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-}
-
-.sidebar h1 {
-  font-size: 22px;
+.login-box h2 {
+  color: var(--branco);
+  font-size: 28px;
   margin-bottom: 30px;
 }
-
-.sidebar ul {
-  list-style: none;
+.login-box .form-group {
+  margin-bottom: 20px;
 }
-
-.sidebar ul li {
-  font-size: 14px;
-  margin-bottom: 12px;
-  padding: 6px 10px;
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
   border-radius: 6px;
-  transition: background-color 0.3s, padding-left 0.3s;
-  cursor: pointer;
+  background-color: var(--branco);
+  color: var(--azul-escuro);
 }
 
-.sidebar ul li:hover {
-  background-color: #1a2d50;
-  padding-left: 16px;
+/* Botão ocupa toda a largura do form */
+.btn.block {
+  width: 100%;
 }
 
-.main {
-  flex: 1;
-  padding: 30px 40px;
-}
-
-.topbar {
+/* ÁREA DE IMAGEM */
+.login-image {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+}
+.login-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.topbar h2 {
-  font-size: 22px;
-  border-bottom: 2px solid #11234a;
-  padding-bottom: 4px;
-}
-
-.topbar .user {
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px 30px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group label {
-  font-size: 14px;
-  margin-bottom: 6px;
-}
-
-.form-group input {
-  padding: 10px;
-  background-color: #11234a;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-.form-group input:disabled {
-  background-color: #11234a;
-  color: #fff;
-}
-
+/* RESPONSIVIDADE */
 @media (max-width: 768px) {
-  .form {
+  .login-panel {
     grid-template-columns: 1fr;
   }
+  .login-image {
+    display: none;
+  }
+}
+/* === Botão “Entrar” Turbinado === */
+.login-box .btn.block {
+  display: inline-block;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, var(--azul-hover), var(--azul-escuro));
+  color: var(--branco);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 
+    background 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
+/* Hover */
+.login-box .btn.block:hover {
+  background: linear-gradient(135deg, var(--azul-escuro), var(--azul-hover));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Pressed */
+.login-box .btn.block:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
