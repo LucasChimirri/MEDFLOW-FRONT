@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>MedFlow – Medicações do Paciente</title>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="consulta-page">
+  <div class="container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h1>MedFlow</h1>
+      <h2><i class="fas fa-pills"></i> Farmácia</h2>
+      <ul>
+        <li><a href="4_MF_CadastroMed.html">• Cadastro de Medicações</a></li>
+        <li><a href="4.1_MF_ConsultaMed.html">• Consulta de Medicamentos</a></li>
+        <li><a href="4.2_ExclusãoMed.html">• Exclusão de Medicação</a></li>
+        <li><a href="4.4_MF_LiberacaoMed.html">• Liberação de Medicações</a></li>
+        <li><a href="4.5_MF_RegistroEmerg.html">• Registro Emergencial</a></li>
+        <li><a href="4.6_MF_GestaoEstoque.html">• Gestão de Estoque</a></li>
+      </ul>
+      <ul class="footer-options">
+        <li><a href="#">Sair</a></li>
+      </ul>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+      <div class="medflow-header">
+        <h1>Medicações do Paciente</h1>
+      </div>
+
+      <!-- Busca por ID do paciente -->
+      <div class="consulta-container">
+        <div class="search-group">
+          <label for="idPaciente">Inserir ID do paciente:</label>
+          <input
+            type="number"
+            id="idPaciente"
+            placeholder="Digite o ID do Paciente"
+          />
+          <button id="btnBuscar" class="btn">
+            <i class="fas fa-search"></i> Buscar
+          </button>
+        </div>
+      </div>
+
+      <!-- Resultado: lista de medicações -->
+      <div class="resultado-container">
+        <ul id="listaMedicacoes" class="lista-medicacoes"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="med_cliente.js"></script>
+</body>
+</html>
