@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>MedFlow – Consulta de Funcionário</title>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="consulta_funcionario.js" defer></script>
+</head>
+<body class="consulta-page">
+
+  <!-- Cabeçalho -->
+  <div class="medflow-header">
+    <h1>Consulta de Funcionário</h1>
+  </div>
+
+  <!-- Busca por ID -->
+  <div class="consulta-container">
+    <div class="search-group">
+      <label for="idFuncionario">Inserir ID do funcionário:</label>
+      <input
+        type="number"
+        id="idFuncionario"
+        placeholder="Digite o ID do Funcionário"
+      />
+      <button id="btnBuscar" class="btn">
+        <i class="fas fa-search"></i> Buscar
+      </button>
+    </div>
+  </div>
+
+  <!-- Resultado -->
+  <div class="resultado-container">
+    <form id="resultForm" class="form consulta-form" style="display: none;">
+      <div class="form-group">
+        <label>ID Funcionário</label>
+        <input id="resIdFunc" disabled />
+      </div>
+      <div class="form-group">
+        <label>ID Pessoa</label>
+        <input id="resIdPessoa" disabled />
+      </div>
+      <div class="form-group">
+        <label>Nome</label>
+        <input id="resNome" disabled />
+      </div>
+      <div class="form-group">
+        <label>Sobrenome</label>
+        <input id="resSobreNome" disabled />
+      </div>
+      <div class="form-group">
+        <label>Tipo Documento</label>
+        <input id="resTipoDoc" disabled />
+      </div>
+      <div class="form-group">
+        <label>Número Documento</label>
+        <input id="resNroDoc" disabled />
+      </div>
+      <div class="form-group">
+        <label>Logradouro</label>
+        <input id="resLogradouro" disabled />
+      </div>
+      <div class="form-group">
+        <label>Nº Logradouro</label>
+        <input id="resNroLog" disabled />
+      </div>
+      <div class="form-group">
+        <label>CEP</label>
+        <input id="resCep" disabled />
+      </div>
+      <div class="form-group">
+        <label>Cidade</label>
+        <input id="resCidade" disabled />
+      </div>
+      <div class="form-group">
+        <label>Estado (UF)</label>
+        <input id="resEstado" disabled />
+      </div>
+      <div class="form-group">
+        <label>E-mail</label>
+        <input id="resEmail" disabled />
+      </div>
+      <div class="form-group">
+        <label>Data de Nascimento</label>
+        <input id="resDataNasc" disabled />
+      </div>
+      <div class="form-group">
+        <label>Observações</label>
+        <textarea id="resObs" rows="2" disabled></textarea>
+      </div>
+      <div class="form-group">
+        <label>Login</label>
+        <input id="resLogin" disabled />
+      </div>
+      <div class="form-group">
+        <label>Matrícula</label>
+        <input id="resMatricula" disabled />
+      </div>
+      <div class="form-group">
+        <label>Nº Registro Prof.</label>
+        <input id="resRegistro" disabled />
+      </div>
+      <div class="form-group">
+        <label>Status</label>
+        <input id="resStatus" disabled />
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

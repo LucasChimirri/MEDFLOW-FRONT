@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>MedFlow – Cadastro de Pessoa</title>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="cadastro_pessoa.js" defer></script>
+</head>
+<body>
+  <div class="container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <div>
+        <h1>MedFlow</h1>
+        <h2><i class="fas fa-pills"></i> Farmácia</h2>
+        <ul>
+          <li>
+            <a href="4_MF_CadastroMed.html">• Cadastro de Medicações</a>
+          </li>
+          <li>
+            <a href="4.1_MF_ConsultaMed.html">• Consulta de Medicações</a>
+          </li>
+          <li>
+            <a href="4.3_MF_EditarMed.html">• Edição de Medicação</a>
+          </li>
+          <li>
+            <a href="4.2_MF_ExclusaoMed.html">• Exclusão de Medicação</a>
+          </li>
+          <li>
+            <a href="4_MF_CadastroPessoa.html">• Cadastro de Pessoa</a>
+          </li>
+        </ul>
+      </div>
+      <ul class="footer-options">
+        <li><a href="#">Preferências</a></li>
+        <li><a href="#">Sair</a></li>
+      </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+      <div class="topbar">
+        <h2>Cadastro de Pessoa</h2>
+        <div class="user">
+          <span>Lucas Chimirri</span>
+          <i class="fas fa-user-circle"></i>
+        </div>
+      </div>
+
+      <form class="form" onsubmit="cadastrarPessoa(event)">
+        <!-- 1ª coluna -->
+        <div class="form-group">
+          <label for="tipoPessoa">Tipo de Pessoa</label>
+          <select id="tipoPessoa" required>
+            <option value="">Selecione…</option>
+            <option value="FUNCIONARIO">Funcionário</option>
+            <option value="CLIENTE">Cliente</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="nomePessoa">Nome</label>
+          <input id="nomePessoa" type="text" placeholder="Ex: Ana" required />
+        </div>
+        <div class="form-group">
+          <label for="sobreNome">Sobrenome</label>
+          <input id="sobreNome" type="text" placeholder="Ex: Silva" required />
+        </div>
+        <div class="form-group">
+          <label for="tipoDoc">Tipo de Documento</label>
+          <input id="tipoDoc" type="text" placeholder="Ex: CPF" required />
+        </div>
+        <div class="form-group">
+          <label for="nroDoc">Número do Documento</label>
+          <input
+            id="nroDoc"
+            type="text"
+            placeholder="Ex: 123.456.789-00"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="logradouro">Logradouro</label>
+          <input
+            id="logradouro"
+            type="text"
+            placeholder="Ex: Rua das Flores"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="nroLogradouro">Nº do Logradouro</label>
+          <input id="nroLogradouro" type="text" placeholder="Ex: 123" required />
+        </div>
+        <div class="form-group">
+          <label for="cep">CEP</label>
+          <input id="cep" type="text" placeholder="Ex: 01234-567" required />
+        </div>
+        <div class="form-group">
+          <label for="cidade">Cidade</label>
+          <input id="cidade" type="text" placeholder="Ex: São Paulo" required />
+        </div>
+        <div class="form-group">
+          <label for="estado">Estado (UF)</label>
+          <input id="estado" type="text" placeholder="Ex: SP" maxlength="2" required />
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input id="email" type="email" placeholder="Ex: ana@exemplo.com" required />
+        </div>
+        <div class="form-group">
+          <label for="dataNasc">Data de Nascimento</label>
+          <input id="dataNasc" type="date" required />
+        </div>
+        <div class="form-group">
+          <label for="observacoes">Observações</label>
+          <textarea
+            id="observacoes"
+            rows="2"
+            placeholder="Ex: Paciente alérgico a…"
+          ></textarea>
+        </div>
+
+        <!-- Campos adicionais (apenas para FUNCIONÁRIO) -->
+        <div class="form-group">
+          <label for="login">Login</label>
+          <input id="login" type="text" placeholder="Ex: ana123" />
+        </div>
+        <div class="form-group">
+          <label for="senha">Senha</label>
+          <input id="senha" type="password" placeholder="••••••••" />
+        </div>
+        <div class="form-group">
+          <label for="matricula">Matrícula</label>
+          <input id="matricula" type="text" placeholder="Ex: 2023-001" />
+        </div>
+        <div class="form-group">
+          <label for="telaAcesso">Tela de Acesso</label>
+          <input id="telaAcesso" type="text" placeholder="Ex: MEDICAMENTOS" />
+        </div>
+        <div class="form-group">
+          <label for="dataContratacao">Data de Contratação</label>
+          <input id="dataContratacao" type="date" />
+        </div>
+        <div class="form-group">
+          <label for="registroProf">Nº Registro Profissional</label>
+          <input id="registroProf" type="text" placeholder="Ex: 12345-SP" />
+        </div>
+        <div class="form-group">
+          <label for="status">Status</label>
+          <input id="status" type="text" placeholder="Ex: ATIVO" />
+        </div>
+
+        <!-- botão de submit -->
+        <div class="form-group" style="grid-column: span 2;">
+          <button type="submit" class="btn">Cadastrar Pessoa</button>
+        </div>
+      </form>
+
+      <!-- área de retorno da API -->
+      <div id="mensagemRetorno" style="margin-top:20px; font-weight:bold;"></div>
+    </div>
+  </div>
+</body>
+</html>
